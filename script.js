@@ -4,6 +4,8 @@ const SERVICES = {
   en: [
     {
       title: "Corporate & Business Law",
+      priceLabel: "Starting",
+      priceValue: "IDR2,500,000",
       details: [
         "Contract negotiation",
         "Contract drafting including PPJB",
@@ -16,6 +18,8 @@ const SERVICES = {
     },
     {
       title: "Litigation & Dispute Resolution",
+      priceLabel: "Starting",
+      priceValue: "IDR5,000,000",
       details: [
         "General litigation",
         "Arbitration",
@@ -24,6 +28,8 @@ const SERVICES = {
     },
     {
       title: "Tax & Regulatory",
+      priceLabel: "Starting",
+      priceValue: "IDR2,500,000",
       details: [
         "Reporting support",
         "NPWP matters",
@@ -33,6 +39,8 @@ const SERVICES = {
     },
     {
       title: "Family Law",
+      priceLabel: "Starting",
+      priceValue: "IDR5,000,000",
       details: [
         "Divorce",
         "Prenuptial and postnuptial agreements",
@@ -43,6 +51,8 @@ const SERVICES = {
     },
     {
       title: "Employment & Labor Law",
+      priceLabel: "Starting",
+      priceValue: "IDR1,500,000",
       details: [
         "PKWTT and PKWT",
         "Freelance contracts",
@@ -55,6 +65,8 @@ const SERVICES = {
     },
     {
       title: "Regulatory & Emerging Industries",
+      priceLabel: "Starting",
+      priceValue: "IDR2,000,000",
       details: [
         "Compliance consultation",
         "Contract drafting and negotiation",
@@ -66,6 +78,8 @@ const SERVICES = {
     },
     {
       title: "Legal Retainer",
+      priceLabel: "Starting",
+      priceValue: "IDR4,000,000",
       details: [
         "Monthly advisory",
         "Priority consultation",
@@ -77,6 +91,8 @@ const SERVICES = {
   id: [
     {
       title: "Hukum Korporasi & Bisnis",
+      priceLabel: "Harga mulai dari",
+      priceValue: "IDR2,500,000",
       details: [
         "Negosiasi kontrak",
         "Pembuatan kontrak termasuk PPJB",
@@ -89,6 +105,8 @@ const SERVICES = {
     },
     {
       title: "Litigasi & Penyelesaian Sengketa",
+      priceLabel: "Harga mulai dari",
+      priceValue: "IDR5,000,000",
       details: [
         "Litigasi umum",
         "Arbitrase",
@@ -97,6 +115,8 @@ const SERVICES = {
     },
     {
       title: "Perpajakan & Regulasi",
+      priceLabel: "Harga mulai dari",
+      priceValue: "IDR2,500,000",
       details: [
         "Pelaporan",
         "NPWP",
@@ -106,6 +126,8 @@ const SERVICES = {
     },
     {
       title: "Hukum Keluarga",
+      priceLabel: "Harga mulai dari",
+      priceValue: "IDR5,000,000",
       details: [
         "Perceraian",
         "Perjanjian pra dan pasca nikah",
@@ -116,6 +138,8 @@ const SERVICES = {
     },
     {
       title: "Hukum Ketenagakerjaan & Perburuhan",
+      priceLabel: "Harga mulai dari",
+      priceValue: "IDR1,500,000",
       details: [
         "PKWTT dan PKWT",
         "Kontrak freelance",
@@ -128,6 +152,8 @@ const SERVICES = {
     },
     {
       title: "Regulasi & Industri Berkembang",
+      priceLabel: "Harga mulai dari",
+      priceValue: "IDR2,000,000",
       details: [
         "Konsultasi kepatuhan",
         "Pembuatan dan negosiasi kontrak",
@@ -139,6 +165,8 @@ const SERVICES = {
     },
     {
       title: "Retainer Legal",
+      priceLabel: "Harga mulai dari",
+      priceValue: "IDR4,000,000",
       details: [
         "Konsultasi bulanan",
         "Konsultasi prioritas",
@@ -263,6 +291,7 @@ function renderServices() {
     .map((service, index) => `
       <button class="service-card" type="button" data-service-index="${index}">
         <h3>${service.title}</h3>
+        <p class="service-price"><span>${service.priceLabel}</span> <strong>${service.priceValue}</strong></p>
         <p>${service.details.slice(0, 3).join(" • ")}</p>
       </button>
     `)
