@@ -17,20 +17,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleArticlesClick = (e) => {
-    e.preventDefault();
-    const section = document.getElementById("articles");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-    setOpen(false);
-  };
-
   const links = [
     { href: "/", label: t.nav.home },
-    { href: "/#practice-areas", label: t.nav.practiceAreas },
-    { label: t.nav.articles, onClick: handleArticlesClick },
+    { href: "/#services", label: t.nav.practiceAreas },
+    { href: "/#about", label: t.nav.about },
     { href: "/credentials", label: t.nav.credentials },
+    { href: "/approach", label: t.nav.approach },
+    { href: "/#contact", label: t.nav.contact },
   ];
 
   return (
@@ -45,17 +38,11 @@ export default function Navbar() {
         </Link>
 
         <nav className="nav-links" aria-label="Primary navigation">
-          {links.map((link, idx) =>
-            link.onClick ? (
-              <button key={`articles-${idx}`} onClick={link.onClick}>
-                {link.label}
-              </button>
-            ) : (
-              <Link key={link.href} href={link.href}>
-                {link.label}
-              </Link>
-            )
-          )}
+          {links.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="nav-actions">
@@ -91,21 +78,11 @@ export default function Navbar() {
       </div>
 
       <div className={`mobile-menu ${open ? "mobile-menu-open" : ""}`}>
-        {links.map((link, idx) =>
-          link.onClick ? (
-            <button
-              key={`articles-${idx}`}
-              onClick={link.onClick}
-              className="mobile-menu-button"
-            >
-              {link.label}
-            </button>
-          ) : (
-            <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
-              {link.label}
-            </Link>
-          )
-        )}
+        {links.map((link) => (
+          <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            {link.label}
+          </Link>
+        ))}
         {/* Language switch in mobile menu too */}
         <div style={{ padding: "16px 24px", borderBottom: "1px solid var(--border)" }}>
           <LanguageSwitch

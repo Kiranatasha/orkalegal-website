@@ -63,17 +63,9 @@ export default function Hero() {
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                <button
-                  className="button button-secondary"
-                  onClick={() => {
-                    const section = document.getElementById("practice-areas");
-                    if (section) {
-                      section.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
+                <Link className="button button-secondary" href="/#services">
                   {h.cta2}
-                </button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>
