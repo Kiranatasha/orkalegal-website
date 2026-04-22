@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer";
-import FloatingWhatsApp from "../../components/FloatingWhatsApp";
 import Navbar from "../../components/Navbar";
 import MotionSection from "../../components/MotionSection";
 import { approachSteps } from "../../lib/site-data";
@@ -38,7 +37,6 @@ export default function ApproachPage() {
         </MotionSection>
       </main>
       <Footer />
-      <FloatingWhatsApp />
     </>
   );
 }

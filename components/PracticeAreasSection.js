@@ -20,7 +20,7 @@ export default function PracticeAreasSection() {
   const areas = t.practiceList;
 
   return (
-    <MotionSection className="section practice-section" id="services">
+    <MotionSection className="section practice-section" id="practice-areas">
       <div className="container">
         {/* Header */}
         <div className="practice-header">
