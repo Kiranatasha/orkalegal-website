@@ -107,7 +107,7 @@ export default function InsightsSection() {
   const ins = t.insights;
 
   return (
-    <MotionSection className="section insights-section">
+    <MotionSection id="articles" className="section insights-section">
       <div className="container">
         {/* Header */}
         <div className="insights-header">

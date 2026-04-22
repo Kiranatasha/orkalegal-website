@@ -1,7 +1,6 @@
 import AboutSection from "../components/AboutSection";
 import BottomCTA from "../components/BottomCTA";
 import FeaturedWorksSection from "../components/FeaturedWorksSection";
-import FloatingWhatsApp from "../components/FloatingWhatsApp";
 import Footer from "../components/Footer";
 import GlobalBackground from "../components/GlobalBackground";
 import Hero from "../components/Hero";
@@ -26,7 +25,6 @@ export default function HomePage() {
         <BottomCTA />
       </main>
       <Footer />
-      <FloatingWhatsApp />
     </>
   );
 }

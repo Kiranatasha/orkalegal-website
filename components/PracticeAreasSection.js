@@ -20,7 +20,7 @@ export default function PracticeAreasSection() {
   const areas = t.practiceList;
 
   return (
-    <MotionSection className="section practice-section" id="services">
+    <MotionSection className="section practice-section" id="practice-areas">
       <div className="container">
         {/* Header */}
         <div className="practice-header">
@@ -92,7 +92,6 @@ export default function PracticeAreasSection() {
 
         <div className="practice-footer">
           <Link className="text-link" href="/credentials">{p.viewCredentials}</Link>
-          <Link className="text-link" href="/approach">{p.viewApproach}</Link>
         </div>
       </div>
     </MotionSection>

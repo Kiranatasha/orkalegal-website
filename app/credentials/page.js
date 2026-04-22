@@ -1,5 +1,4 @@
 import Footer from "../../components/Footer";
-import FloatingWhatsApp from "../../components/FloatingWhatsApp";
 import Navbar from "../../components/Navbar";
 import MotionSection from "../../components/MotionSection";
 import { credentialsItems } from "../../lib/site-data";
@@ -36,7 +35,6 @@ export default function CredentialsPage() {
         </MotionSection>
       </main>
       <Footer />
-      <FloatingWhatsApp />
     </>
   );
 }
